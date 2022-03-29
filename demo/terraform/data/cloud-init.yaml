@@ -9,12 +9,15 @@ packages:
   - curl
   - gnupg-agent
   - software-properties-common
+  - xfce4
+  - firefox
 
 users:
-  - name: john
-    gecos: John Doe
+  - name: vdiuser
+    gecos: VDI User
     sudo: ALL=(ALL) NOPASSWD:ALL
     shell: /bin/bash
+    passwd: $6$CyLgc0cP3SXfwHa9$1qxAPkIiucfb.fqPmMsySVctz9gc3ApMBgMIVird77zK5idqyk0ZNKavZEDuo7VIotuB7Q3W7Zmnvzw820hss/
     groups:
       - docker
     ssh_authorized_keys:
@@ -22,13 +25,15 @@ users:
 
 runcmd:
   - [ sh, -xc, "echo $(date) ': hello world!'" ]
-  - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
-  - add-apt-repository "deb [arch=$(dpkg --print-architecture)] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+  - curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
+  - add-apt-repository "deb [arch=$(dpkg --print-architecture)] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
   - apt-get update -y
   - apt-get install -y docker-ce docker-ce-cli containerd.io
   - systemctl start docker
   - systemctl enable docker
   - curl -O -L "https://golang.org/dl/go1.18.linux-amd64.tar.gz"
   - tar -C /usr/local -xzf go1.18.linux-amd64.tar.gz
+  - curl -O -L "https://download.nomachine.com/download/7.9/Linux/nomachine_7.9.2_1_amd64.deb"
+  - dpkg -i nomachine_7.9.2_1_amd64.deb
 
 final_message: "VDI is up and running after $UPTIME seconds"

@@ -49,6 +49,32 @@ resource "openstack_compute_secgroup_v2" "default_vdi" {
     ip_protocol = "tcp"
     cidr        = "0.0.0.0/0"
   }
+
+  // nomachine
+  rule {
+    from_port   = 4000
+    to_port     = 4000
+    ip_protocol = "tcp"
+    cidr        = "0.0.0.0/0"
+  }
+  rule {
+    from_port   = 4080
+    to_port     = 4080
+    ip_protocol = "tcp"
+    cidr        = "0.0.0.0/0"
+  }
+  rule {
+    from_port   = 4443
+    to_port     = 4443
+    ip_protocol = "tcp"
+    cidr        = "0.0.0.0/0"
+  }
+    rule {
+    from_port   = 4011
+    to_port     = 4999
+    ip_protocol = "udp"
+    cidr        = "0.0.0.0/0"
+  }
 }
 
 
@@ -61,7 +87,7 @@ data "template_file" "user_data" {
 
 resource "openstack_compute_instance_v2" "vdi" {
   name            = "vdi"
-  image_name      = "Ubuntu 21.10 Impish Indri"
+  image_name      = "Debian 11.3 bullseye"
   flavor_name     = "a1-ram2-disk20-perf1"
   key_pair        = "keypair_vdi"
   security_groups = ["default_vdi"]
@@ -70,6 +96,9 @@ resource "openstack_compute_instance_v2" "vdi" {
   network {
     name = "ext-net1"
   }
+
+  // Get around dependency issues during destroy phase
+  depends_on = [ openstack_compute_secgroup_v2.default_vdi ]
 }
 
 # export the public IP
