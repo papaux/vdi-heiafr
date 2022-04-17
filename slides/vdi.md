@@ -1,26 +1,49 @@
 ## A modern approach to VDI
 
-<center>
-Séminaire Linux, HEIAFR
-</center>
+<br />
 
 <center>
 <em>
-TODO date
+Geoffrey Papaux, May 19, 2022
 </em>
 </center>
 
 <br/>
-
-<center>
-Geoffrey Papaux
-</center>
-
-<center>
-<a href="https://github.com/papaux">
-https://github.com/papaux
+Slides and code:
+<br />
+<a href="https://papaux.github.io/vdi-heiafr">
+https://papaux.github.io/vdi-heiafr
 </a>
-</center>
+
+---
+
+## About me
+<img src="avatar.png" width="100" style="margin: 0px">
+<br />
+
+
+- Master in Computer Science (here at HEIA-FR 🏫)
+- 5 years of embedded system development (Linux/C++)
+- 3 years of data processing (Kafka/Scala/Golang/...)
+- using a VDI on a daily basis
+
+
+<br />
+  <center>
+  <a href="https://github.com/papaux">
+  https://github.com/papaux
+  </a>
+  </center>
+  <center>
+  <a href="https://linkedin.com/in/gpapaux">
+  https://linkedin.com/in/gpapaux
+  </a>
+  </center>
+
+
+
+
+
 
 ---
 
@@ -32,7 +55,18 @@ https://github.com/papaux
 
 ---
 
+## TODO
+
+Before starting:
+- who is familiar with the concept of VDI ?
+- who is using a form of VDI at his company ?
+
+---
+
 ## VDI
+
+TODO:
+Vdi advantage: always running, recover session / can work when offline 
 
 ### (Virtual Desktop Infrastructure)
 
@@ -95,7 +129,7 @@ Desktop as a Service
 
 ---
 
-## Benefits (2)
+## Benefits
 
 3. Easier IT Management
     - Easier to manage and patch
@@ -104,6 +138,14 @@ Desktop as a Service
     - Access to a Linux environment
     - Performance boost from server hardware
     - Messed up your environment ? Simply rebuild!
+
+---
+
+## Disadvantages
+
+<img src="latency.gif" height="400">
+
+#### Latency is your enemy!
 
 ---
 
@@ -118,7 +160,7 @@ Desktop as a Service
 
 ---
 
-## Disadvantages (2)
+## Disadvantages
 
 3. Requires dedicated staff
     - Self hosted: IT support and buy-in
@@ -128,6 +170,8 @@ Desktop as a Service
     - USB, Serial, ...
 
 ---
+
+
 
 ## Options
 
@@ -161,4 +205,12 @@ Self hosted vs in the cloud
 
 ## Demo
 
+Small diagram about what we are going to do
 
+workflow overview
+
+Create VM -> Setup environment -> install tools from cloud-init
+
+Questions:
+- who is familiar with OpenStack or has used it ?
+- who is faimiliar with terraform and used it ?
