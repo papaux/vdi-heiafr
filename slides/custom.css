@@ -1,10 +1,15 @@
 /* Some custom CSS styles */
 
+.reveal center {
+  font-size: 0.8em;
+}
 .reveal p {
   text-align: left;
+  font-size: 0.8em;
 }
 .reveal ul {
   display: block;
+  font-size: 0.8em;
 }
 .reveal ol {
   display: block;
