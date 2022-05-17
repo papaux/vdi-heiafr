@@ -14,25 +14,25 @@
 ## Openstack CLI
 
 1. Open the project in a console
-2. source ./setup.sh
+2. `source ./setup.sh`
     - show the script
 3. Validate that it works with a simple command
-    - openstack image list
-    - openstack flavor list
+    - `openstack image lis`
+    - `openstack flavor lis`
 4. Check with infomaniak flavor list: https://www.infomaniak.com/en/hosting/public-cloud/prices
 
 
 ## Terraform demo
 
-1. cd terraform
-2. tf init
-3. tf validate
-4. tf plan
-5. tf apply
+1. `cd terrafor`
+2. `tf init`
+3. `tf validate`
+4. `tf plan`
+5. `tf apply`
 
 ## Terraform Walk-through
 
-Browse the code:
+Check the code:
 
 1. main.tf
 2. cloud-init.yaml
