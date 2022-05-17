@@ -9,7 +9,7 @@ Discover how embracing VDI could help your transition to remote work while maint
 
 ## Slides
 
-Check the slides online at https://papaux.github.io/vdi-heiafr.
+Check the slides online at https://papaux.github.io/vdi-heiafr/slides.
 
 Run locally:
 
