@@ -10,14 +10,14 @@ packages:
   - gnupg-agent
   - software-properties-common
   - xfce4
-  - firefox
+  - firefox-esr
 
 users:
   - name: vdiuser
     gecos: VDI User
     sudo: ALL=(ALL) NOPASSWD:ALL
     shell: /bin/bash
-    passwd: $6$CyLgc0cP3SXfwHa9$1qxAPkIiucfb.fqPmMsySVctz9gc3ApMBgMIVird77zK5idqyk0ZNKavZEDuo7VIotuB7Q3W7Zmnvzw820hss/
+    passwd: $6$RgkXyuoGAG7/KAqp$1cHXQc0liBC.b8knI6CrzbdnSJjNvrsQBjZQqrpNiDFGHKrmGUXyvqCtmmJDyGPEHL2jggmmLX.Q2G7LckVe./
     groups:
       - docker
     ssh_authorized_keys:
