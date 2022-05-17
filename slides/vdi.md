@@ -9,11 +9,8 @@ Geoffrey Papaux, May 19, 2022
 </center>
 
 <br/>
-Slides and code:
+22nd Fribourg Linux Seminar
 <br />
-<a href="https://papaux.github.io/vdi-heiafr">
-https://papaux.github.io/vdi-heiafr
-</a>
 
 ---
 
@@ -25,7 +22,7 @@ https://papaux.github.io/vdi-heiafr
 - Master in Computer Science (here at HEIA-FR 🏫)
 - 5 years of embedded system development (Linux/C++)
 - 3 years of data processing (Kafka/Scala/Golang/...)
-- using a VDI on a daily basis
+- Using a VDI on a daily basis
 
 
 <br />
@@ -40,46 +37,48 @@ https://papaux.github.io/vdi-heiafr
   </a>
   </center>
 
-
-
-
-
-
 ---
 
 ## Agenda
 
-* VDI: what are we talking about ?
-* Motivations
+* VDI: What are we talking about ?
+* Motivations and drawbacks
+* Some VDI solutions
 * Demo
 
 ---
 
-## TODO
+## VDI ?
 
-Before starting:
-- who is familiar with the concept of VDI ?
-- who is using a form of VDI at his company ?
+![Poll](questions.png)
+
+<!-- .element: style="text-align: center" -->
 
 ---
 
 ## VDI
 
-TODO:
-Vdi advantage: always running, recover session / can work when offline 
+### Virtual Desktop Infrastructure
 
-### (Virtual Desktop Infrastructure)
-
-_Set of technologies providing access to remote computers_
+_Set of technologies for hosting and accessing virtual remote computers._
 
 <!-- .element: style="text-align: center" -->
 
-- An old idea ("Citrix" does it for > 20 years)
-- Recently revisited
-  - thanks to technology improvements
-  - due to an infamous event...
+---
+
+### VDI
+
+- An old idea: **VDI alliance** created in 2006 by VMware ([link](https://news.vmware.com/releases/vdi))
+  - 20+ companies including Citrix, HP, IBM, Sun
+- Recently revisited thanks to...
+
+![VDI Driving Factors](vdi-drivers.png)
+
+<!-- .element: style="text-align: center" -->
 
 ---
+
+## Google Trends "Virtual Desktop"
 
 ![Google Trends - Virtual Desktop](google-trends-virtual-desktop.png)
 
@@ -99,45 +98,29 @@ _Set of technologies providing access to remote computers_
 
 ---
 
-## Following the trend
-
-![Daas](daas-1-shadow.png)
-
-<!-- .element: style="text-align: center" -->
-
----
-
-## Meet DaaS
-
-![Daas](daas-2-shadow.png)
-
-<!-- .element: style="text-align: center" -->
-
-Desktop as a Service
-
----
-
 ## Benefits
 
 1. Access from anywhere
     - Perfect for WFH
+    - Device flexibility
 
 2. Security
-    - No confidential files/code on laptops
-    - Isolated environments
-    - Especially for developers (admin/sudo ?)
+    - No confidential files on laptops
+    - Network isolation
+    - Controlled environments for admin/sudo
 
 ---
 
 ## Benefits
 
-3. Easier IT Management
+3. IT Management
     - Easier to manage and patch
 
 4. Happier developers
     - Access to a Linux environment
-    - Performance boost from server hardware
+    - Server hardware => performance boost
     - Messed up your environment ? Simply rebuild!
+    - Always running
 
 ---
 
@@ -157,60 +140,127 @@ Desktop as a Service
 2. Single point of failure
     - Laptops become useless without acess to VDI
 
-
 ---
 
 ## Disadvantages
 
-3. Requires dedicated staff
-    - Self hosted: IT support and buy-in
-    - Cloud: somebody still needs to setup and maintain
+3. Dedicated staff
+    - IT support and knowledge
 
 4. Harder to access to local hardware
     - USB, Serial, ...
 
 ---
 
+## Cost
 
+Commercial offerings advertise lower costs. Is it really true ?
 
-## Options
+&plus; Lower end client devices<br />
+&plus; Optimize hardware usage<br />
 
-1. Commercial provider
-    - VMware, Citrix, ...
-
-2. On-premise
-    - OpenStack
-
-3. Cloud
-    - Your favorite provider
+&minus; Upfront server cost (or monthly cloud fees)<br />
+&minus; IT staff and training<br />
+&minus; Licensing<br />
 
 ---
 
-##
-
-TODO
-cloud options ?
-VMware ?
-Citrx ?
-
-
-Persistent vs nonpersistent
-
-Self hosted vs in the cloud
+## What's new ?
 
 ---
 
+## Following the trend
+
+![Daas](daas-1-shadow.png)
+<!-- .element: class="r-stretch" style="text-align: center" -->
+
+---
+
+## Meet DaaS
+
+![Daas](daas-2-shadow.png)
+<!-- .element: class="r-stretch"  style="text-align: center" -->
+
+---
+
+
+## Windows 365
+
+![Windows 365](windows365_small.png)
+<!-- .element: class="r-stretch" style="text-align: center" -->
+
+4 vCPU, 16GB RAM, 256GB SSD => $54 / month
+<!-- .element: style="text-align: center" -->
+
+---
+
+## Shadow
+
+![Shadow](shadow2.jpg)
+<!-- .element: class="r-stretch" style="text-align: center" -->
+
+8 vCPU, 12GB RAM, 256GB SSD, **GTX 1080** => CHF 34.99 / month
+<!-- .element: style="text-align: center" -->
+
+---
+
+## Recap: Options for VDI
+
+![Recap](recap-options.png)
+<!-- .element: style="text-align: center" -->
+
+=> A lot of options, commercial and Free/OpenSource !
+<!-- .element: style="text-align: center" -->
 
 ---
 
 ## Demo
 
-Small diagram about what we are going to do
+### Let's setup a VDI!
 
-workflow overview
 
-Create VM -> Setup environment -> install tools from cloud-init
+<img src="builder.png">
+
+<!-- .element: style="text-align: center; max-height: 300px" -->
+---
+
+## Demo
+
+<img src="demo-flow.png">
+
+---
+
+## Demo
+
+TODO: remove ??
+
+<img src="demo-flow-all.png">
+---
+
+## Demo cont'd
+
+To include:
+- we are using infomaniak cloud
+- description of the setup with text ?
 
 Questions:
 - who is familiar with OpenStack or has used it ?
 - who is faimiliar with terraform and used it ?
+
+---
+
+<br/>
+Slides and code:
+<br />
+<a href="https://papaux.github.io/vdi-heiafr">
+https://papaux.github.io/vdi-heiafr
+</a>
+
+---
+
+<br/>
+Image and animation sources:
+<br/>
+<a href="https://www.anyrgb.com">https://www.anyrgb.com</a>
+<br/>
+<a href="https://tenor.com">https://tenor.com</a>

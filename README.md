@@ -18,6 +18,8 @@ cd slides
 ./run-local.sh
 ```
 
+Print: http://localhost:9000/?print-pdf
+
 ## Demo
 
 Terraform files for reproducing the demo part are available in the [demo](demo/) subfolder.
