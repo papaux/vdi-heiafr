@@ -30,6 +30,8 @@ export TF_VAR_password=$OS_PASSWORD
 export TF_VAR_tenant=$OS_PROJECT_NAME
 alias tf=$PWD/terraform/terraform
 
+# A convenience alias for SSH using the dynamic IP
 alias ssh-vdi='ssh vdiuser@$(tf output -raw public_ip) -o "UserKnownHostsFile=/dev/null"'
 
-  
+# A convenience (but dummy) alias to update the first HostName of your ~/.ssh/config file with the dynamic IP
+alias ssh-config='sed -i "s/HostName.*/HostName $(tf output -raw public_ip)/g" ~/.ssh/config'

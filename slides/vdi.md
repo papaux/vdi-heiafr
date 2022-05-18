@@ -41,9 +41,10 @@ Geoffrey Papaux, May 19, 2022
 
 ## Agenda
 
-* VDI: What are we talking about ?
-* Motivations and drawbacks
-* Some VDI solutions
+* Definition and history
+* Architecture
+* Benefits and drawbacks
+* Available solutions
 * Demo
 
 ---
@@ -56,9 +57,9 @@ Geoffrey Papaux, May 19, 2022
 
 ---
 
-## VDI
+### VDI
 
-### Virtual Desktop Infrastructure
+## Virtual Desktop Infrastructure
 
 _Set of technologies for hosting and accessing virtual remote computers._
 
@@ -66,7 +67,14 @@ _Set of technologies for hosting and accessing virtual remote computers._
 
 ---
 
-### VDI
+## Overview
+
+![VDI Intro](vdi-intro.png)
+<!-- .element: class="r-stretch" style="text-align: center" -->
+
+---
+
+## History
 
 - An old idea: **VDI alliance** created in 2006 by VMware ([link](https://news.vmware.com/releases/vdi))
   - 20+ companies including Citrix, HP, IBM, Sun
@@ -83,14 +91,7 @@ _Set of technologies for hosting and accessing virtual remote computers._
 ![Google Trends - Virtual Desktop](google-trends-virtual-desktop.png)
 
 ---
-### Virtual Desktop Infrastructure
-
-![Virtual Desktop Infrastructure](vdi-concept.png)
-
-<!-- .element: style="text-align: center" -->
-
----
-### Virtual Desktop Infrastructure
+### VDI Architecture
 
 ![Virtual Desktop Infrastructure](vdi-network.png)
 
@@ -100,31 +101,17 @@ _Set of technologies for hosting and accessing virtual remote computers._
 
 ## Benefits
 
-1. Access from anywhere
-    - Perfect for WFH
-    - Device flexibility
+1. Access from anywhere and from any device (WFH Nirvana!)
 
-2. Security
-    - No confidential files on laptops
-    - Network isolation
-    - Controlled environments for admin/sudo
-
----
-
-## Benefits
+2. Security and isolation
 
 3. IT Management
-    - Easier to manage and patch
 
-4. Happier developers
-    - Access to a Linux environment
-    - Server hardware => performance boost
-    - Messed up your environment ? Simply rebuild!
-    - Always running
+4. Happier developers (if done right)
 
 ---
 
-## Disadvantages
+## Drawbacks
 
 <img src="latency.gif" height="400">
 
@@ -132,36 +119,28 @@ _Set of technologies for hosting and accessing virtual remote computers._
 
 ---
 
-## Disadvantages
+## Drawbacks
 
-1. Network requirements
-    - Latency and bandwidth (client & server !)
+1. Network requirements (client & server !)
 
-2. Single point of failure
-    - Laptops become useless without acess to VDI
+2. Single point of failure (laptops are useless without VDI)
 
----
+3. Dedicated and trained IT staff
 
-## Disadvantages
-
-3. Dedicated staff
-    - IT support and knowledge
-
-4. Harder to access to local hardware
-    - USB, Serial, ...
+4. Harder to access to local hardware (USB, Serial, ...)
 
 ---
 
-## Cost
+## Cost ?
 
 Commercial offerings advertise lower costs. Is it really true ?
 
-&plus; Lower end client devices<br />
+&plus; No need for powerful laptops/workstations<br />
 &plus; Optimize hardware usage<br />
 
 &minus; Upfront server cost (or monthly cloud fees)<br />
 &minus; IT staff and training<br />
-&minus; Licensing<br />
+&minus; Licensing & support<br />
 
 ---
 
@@ -206,8 +185,8 @@ Commercial offerings advertise lower costs. Is it really true ?
 
 ## Recap: Options for VDI
 
-![Recap](recap-options.png)
-<!-- .element: style="text-align: center" -->
+<img src="recap-options.png">
+<!-- .element: class="r-stretch" style="text-align: center" -->
 
 => A lot of options, commercial and Free/OpenSource !
 <!-- .element: style="text-align: center" -->
@@ -216,36 +195,37 @@ Commercial offerings advertise lower costs. Is it really true ?
 
 ## Demo
 
-### Let's setup a VDI!
+### Let's setup a "cloud" VDI!
 
 
 <img src="builder.png">
 
-<!-- .element: style="text-align: center; max-height: 300px" -->
+<!-- .element: class="r-stretch" style="text-align: center" -->
+---
+
+## Technologies
+
+<img src="demo-components.png">
+<!-- .element: style="text-align: center; " -->
+
+---
+
+## Terraform
+
+<img src="terraform.png">
+<!-- .element: style="text-align: center;" -->
+
 ---
 
 ## Demo
+
+### Let's run it!
+
+---
+
+## What happened ?
 
 <img src="demo-flow.png">
-
----
-
-## Demo
-
-TODO: remove ??
-
-<img src="demo-flow-all.png">
----
-
-## Demo cont'd
-
-To include:
-- we are using infomaniak cloud
-- description of the setup with text ?
-
-Questions:
-- who is familiar with OpenStack or has used it ?
-- who is faimiliar with terraform and used it ?
 
 ---
 

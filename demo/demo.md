@@ -18,17 +18,20 @@
     - show the script
 3. Validate that it works with a simple command
     - `openstack image lis`
-    - `openstack flavor lis`
 4. Check with infomaniak flavor list: https://www.infomaniak.com/en/hosting/public-cloud/prices
 
 
 ## Terraform demo
 
-1. `cd terrafor`
+1. `cd terraform`
 2. `tf init`
 3. `tf validate`
 4. `tf plan`
 5. `tf apply`
+
+## What did happen ?
+
+1. Back to the slides
 
 ## Terraform Walk-through
 
@@ -44,23 +47,24 @@ xssh-add heiafr_demo
 ```
 
 ```
+ssh-config
 ssh-vdi
 ```
 
 ```
-grep VDI /var/log/cloud-init.log
-tail /var/log/cloud-init.log
+grep "VDI is up" /var/log/cloud-init.log
+tail -n 1 /var/log/cloud-init.log
 ```
 
 ## NoMachine
 
 1. Open connection and update IP
 2. Connect to the server
+3. Open Firefox and a video
 
 ## VsCode
 
-1. Update ssh/config with new IP
-2. Clone https://github.com/papaux/golang-web-server.git
+1. Configure and open the remote server
 
 ## Destroy
 
@@ -71,3 +75,4 @@ tf destroy
 ## Cloud init
 
 https://cloudinit.readthedocs.io/en/latest/topics/examples.html
+

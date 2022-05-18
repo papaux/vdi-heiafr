@@ -17,7 +17,8 @@ users:
     gecos: VDI User
     sudo: ALL=(ALL) NOPASSWD:ALL
     shell: /bin/bash
-    passwd: $6$RgkXyuoGAG7/KAqp$1cHXQc0liBC.b8knI6CrzbdnSJjNvrsQBjZQqrpNiDFGHKrmGUXyvqCtmmJDyGPEHL2jggmmLX.Q2G7LckVe./
+    hashed_passwd: $6$MjG8HkOqoUdyBkw6$hKb4CYP/OXxtIrNwkZ5.UmvmLgs0F9JR5e4OC9.da8euYXeTihHNpdMLp/S2jB26mn5bnZcSiLHmtdoC5pjc//
+    lock-passwd: False
     groups:
       - docker
     ssh_authorized_keys:
@@ -33,7 +34,9 @@ runcmd:
   - systemctl enable docker
   - curl -O -L "https://golang.org/dl/go1.18.linux-amd64.tar.gz"
   - tar -C /usr/local -xzf go1.18.linux-amd64.tar.gz
+  - echo 'PATH=$PATH:/usr/local/go/bin' | tee /etc/bash.bashrc
   - curl -O -L "https://download.nomachine.com/download/7.9/Linux/nomachine_7.9.2_1_amd64.deb"
   - dpkg -i nomachine_7.9.2_1_amd64.deb
+  - git clone https://github.com/papaux/golang-web-server.git /home/vdiuser/golang-web-server
 
 final_message: "VDI is up and running after $UPTIME seconds"

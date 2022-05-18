@@ -69,7 +69,7 @@ resource "openstack_compute_secgroup_v2" "default_vdi" {
     ip_protocol = "tcp"
     cidr        = "0.0.0.0/0"
   }
-    rule {
+  rule {
     from_port   = 4011
     to_port     = 4999
     ip_protocol = "udp"
