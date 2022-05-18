@@ -7,27 +7,21 @@
 3. Open the user settings and create a password.
 4. Go to OpenStack dashboard and login
 5. Login (careful, the user name is behind "Gérer")
-6. Download the rc configuration file
-7. Show the rc configuration file and commnet
-   - a bunch of environment variables for setting up environment
+6. Download the rc configuration file and explain
 
 ## Openstack CLI
 
 1. Open the project in a console
 2. `source ./setup.sh`
-    - show the script
 3. Validate that it works with a simple command
-    - `openstack image lis`
-4. Check with infomaniak flavor list: https://www.infomaniak.com/en/hosting/public-cloud/prices
-
+    - `openstack image list`
+4. Optionally check with infomaniak flavor list: https://www.infomaniak.com/en/hosting/public-cloud/prices
 
 ## Terraform demo
 
 1. `cd terraform`
 2. `tf init`
-3. `tf validate`
-4. `tf plan`
-5. `tf apply`
+3. `tf apply`
 
 ## What did happen ?
 
