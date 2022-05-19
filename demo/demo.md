@@ -37,11 +37,6 @@ Check the code:
 ## Connect and validate
 
 ```
-xssh-add heiafr_demo
-```
-
-```
-ssh-config
 ssh-vdi
 ```
 

@@ -22,5 +22,6 @@ Print: http://localhost:9000/?print-pdf
 
 ## Demo
 
-Terraform files for reproducing the demo part are available in the [demo](demo/) subfolder.
+Terraform files for reproducing the demo are available in the [demo](demo/) subfolder.
 
+Instructions are provided in the file [demo.md](/demo/demo.md).
