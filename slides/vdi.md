@@ -232,8 +232,8 @@ Commercial offerings advertise lower costs. Is it really true ?
 <br/>
 Slides and code:
 <br />
-<a href="https://papaux.github.io/vdi-heiafr">
-https://papaux.github.io/vdi-heiafr
+<a href="https://github.com/papaux/vdi-heiafr">
+https://github.com/papaux/vdi-heiafr
 </a>
 
 ---
